@@ -22,17 +22,21 @@ Tools used in the current work:
 * DNA Features Viewer (python3 package)
 
 
+* hmmer 
+* 
+
 
 ### Workflow for phylogenetic analysis 
 
-1. Retrieving data: 
-
+1. Data retrieval: 
  - bacterial complete genome sequences and annotations of latest version from the RefSeq FTP server 
  - id mapping metadata from Uniprot FTP server 
  - Pfam35.0 database
+ - taxonomy infromation from ftp://ftp.ncbi.nih.gov/pub/taxonomy/ 
  
 
-
+2. Search for homologs of Yih proterins from _E. coli_ K-12 MG1655 (`phmmer`) the Pfam protein database (Pfamseq),  extraction pf protein sequences from Pfamseq (`esl-sfetch`), use them as a local database (`makeblastdb`) for additional analysis of Yih protein query sequences by `blastp` (`-outfmt 7 -evalue 1e-3 -num_descriptions 30000  -num_alignments 30000`)
+3. 
 
 Homologs of Yih proteins of E. coli str. K-12 substr. MG1655 were searched using HMMER version 3.2.1 (phmmer, default parameters) in the Pfam protein database, or Pfamseq (http://hmmer.org/). Proteins sequences of phmmer output were extracted from Pfamseq by esl-sfetch program and used as a local database for additional analysis of Yih protein query sequences by BLASTP (Altschul et al.,1990) (parameters: -outfmt 7 -num_descriptions 30000 -num_alignments 30000). BLASTP results with E-value < 0.001 were selected. These sequences derived from Pfamseq had unique identifiers (ID) presented as UniProt Knowledgebase accession numbers (UniProtKB-AC) (Morgat et al., 2019). UniProtKB-ACs were cross-referenced to GenBank protein ID using metadata for ID mapping from the FTP UniProt site (Morgat et al., 2019). After that, out of all Yih protein homologs only bacterial ones were selected according to taxonomy information obtained from the FTP NCBI site (Agarwala et al., 2018). Analyzing GFF data, for each protein sequence we found where it is encoded using its GenBank genome ID.
 
