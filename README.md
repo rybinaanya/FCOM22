@@ -22,16 +22,26 @@ Tools used in the current work:
 * DNA Features Viewer (python3 package)
 
 
+
 ### Workflow for phylogenetic analysis 
 
+1. Retrieving data: 
+ - bacterial complete genome sequences and annotations of latest version from the RefSeq FTP server
+ - id mapping metadata from Uniprot FTP server 
+ - Pfam35.0 database
+3. 
 
 
+
+35
+To increase the number of strains in our dataset with the Yih protein homologs, independently of the procedure described above, we found nucleotide homologs of yih genes and then obtained respective protein sequences. For this, the yih gene sequences of E. coli str. K-12 substr. MG1655 were retrieved from NCBI GenBank (Benson et al., 2018). Genomic regions homologous to yih genes were identified using the NsimScan tool (Novichkov et al., 2016) against bacterial genomes. NsimScan program was run with the following command line arguments: -v -k 8 -t 150 --it 55 --xt 55 --rpq 10000 --om M8 --maxslen 10000000 --minlen 70 --mdom. Output of nucleotide homology search contained information on target GenBank genome IDs and genomic coordinates of homologous fragments. For each homologous region, midpoint genomic location was calculated and used for extracting GenBank protein ID and protein sequence from translated CDS records. From these candidate Yih homologs, a local database was built for BLASTP analysis where Yih proteins of E. coli str. K-12 substr. MG1655 were again used as the query. BLASTP results with E-value < 0.001 were selected.
+After that, we pooled protein sequences of Yih homologs obtained from both “phmmer + blastp” and “nsimscan+blastp” techniques into a single dataset (Fig. 11).
 
 ### Workflow for RNA-seq analysis 
 
 1. Primary quality check of reads data: `FastQC` and `MultiQC`
 2. Trimming and filtering reads: `bbduk` (oprtions: `-Xmx1g ktrim=r k=23 mink=11 hdist=1 tpe tbo`)
-3. rRNA decontamination: mapping to rrna genes of respective strain (`bowtie2`), getting unmapped reads (`samtools`), quality check  (`FastQC` + `MultiQC`)
+3. rRNA decontamination: mapping to rrna genes of respective strain (`bowtie2`), getting unmapped reads (`samtools `), quality check  (`FastQC` + `MultiQC`)
 4. Mapping to reference genomes (_E. coli_ K12: GCF_000005845.2, _E. coli_ Nissle 1917: GCF_019967895.1): `bowtie2` + `samtools`
 5. Counting reads to genomic features: `featureCounts`
 6. Differential expression analysis: `DESeq2`
