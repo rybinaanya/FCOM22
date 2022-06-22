@@ -26,24 +26,30 @@ Tools used in the current work:
 ### Workflow for phylogenetic analysis 
 
 1. Retrieving data: 
- - bacterial complete genome sequences and annotations of latest version from the RefSeq FTP server 
- - id mapping metadata from Uniprot FTP server 
- - Pfam35.0 database
- - taxonomy infromation from ftp://ftp.ncbi.nih.gov/pub/taxonomy/ 
+ - bacterial complete genome sequences and annotations of latest version, respective translated CDS records (from the RefSeq FTP server);  
+ - id mapping metadata (from Uniprot FTP server);
+ - Pfam35.0 database;
+ - taxonomy infromation (from ftp://ftp.ncbi.nih.gov/pub/taxonomy/) 
 
 **"phmmer + blastp" approach**:
 
-2. Search for homologs of Yih proteins from _E. coli_ K-12 MG1655 (`phmmer`) in the Pfam protein database (Pfamseq), extracting protein sequences from the Pfamseq (`esl-sfetch`), use them as a local database (`makeblastdb`) for additional analysis of Yih protein query sequences by `blastp` (`-outfmt 7 -evalue 1e-3 -num_descriptions 30000  -num_alignments 30000`), select blastp results with E-value < 0.0
+2. Search for homologs of Yih proteins from _E. coli_ K-12 MG1655 (`phmmer`) in the Pfam protein database (Pfamseq), extracting protein sequences from the Pfamseq (`esl-sfetch`), use them as a local database (`makeblastdb`) for additional analysis of Yih protein query sequences by `blastp` (`-outfmt 7 -evalue 1e-3 -num_descriptions 30000  -num_alignments 30000`), select BLASTP results with E-value < 0.0
 4. Id mapping of protein homologs: cross-reference UniProt Knowledgebase accession numbers (UniProtKB-AC) to GenBank protein IDs based on ID mapping metadata from the FTP UniProt site 
 5. Select bacterial homologs according to taxonomy information from the FTP NCBI site
 6. For each protein sequence, get location of the respective gene from GFF annotations
 
 
 **"nsimscan + blastp" approach**:
+
 To increase the number of strains in our dataset with the Yih protein homologs, independently of the procedure described above, we found nucleotide homologs of yih genes and then obtained respective protein sequences.
-6. Identify genomic regions homologous to yih genes against bacterial genomes (`nsimscan`, options: `-v -k 8 -t 150 --it 55 --xt 55 --rpq 10000 --om M8 --maxslen 10000000 --minlen 70 --mdom`). 
-7.  Output of nucleotide homology search contained information on target GenBank genome IDs and genomic coordinates of homologous fragments. For each homologous region, midpoint genomic location was calculated and used for extracting GenBank protein ID and protein sequence from translated CDS records. From these candidate Yih homologs, a local database was built for BLASTP analysis where Yih proteins of E. coli str. K-12 substr. MG1655 were again used as the query. BLASTP results with E-value < 0.001 were selected.
-After that, we pooled protein sequences of Yih homologs obtained from both “phmmer + blastp” and “nsimscan+blastp” techniques into a single dataset (Fig. 11).
+
+6. Identify genomic regions homologous to yih genes against bacterial genomes `nsimscan` (`-v -k 8 -t 150 --it 55 --xt 55 --rpq 10000 --om M8 --maxslen 10000000 --minlen 70 --mdom`). 
+7. Calculate midpoint genomic location for each homologous region
+8. Extract protein sequence of candidate Yih homologs from translated CDS records 
+9. Build a local database (`makeblastdb`) and run `blastp`using Yih proteins of _E. coli_ str. K-12 substr. MG1655 as the query; select BLASTP results with E-value < 0.001
+
+
+10. Pool protein sequences of Yih homologs obtained from both “phmmer + blastp” and “nsimscan+blastp” approaches into a single dataset
 
 ### Workflow for RNA-seq analysis 
 
