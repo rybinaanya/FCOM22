@@ -27,7 +27,9 @@ Tools used in the current work:
 
 1. Retrieving data: 
  -- bacterial complete genome sequences and annotations of latest version from the RefSeq FTP server
+ 
  -- id mapping metadata from Uniprot FTP server 
+ 
  -- Pfam35.0 database
 3. 
 
