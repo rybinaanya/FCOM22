@@ -32,10 +32,11 @@ Tools used in the current work:
  - taxonomy infromation from ftp://ftp.ncbi.nih.gov/pub/taxonomy/ 
 
 **"phmmer + blastp" approach**:
+
 2. Search for homologs of Yih proteins from _E. coli_ K-12 MG1655 (`phmmer`) in the Pfam protein database (Pfamseq), extracting protein sequences from the Pfamseq (`esl-sfetch`), use them as a local database (`makeblastdb`) for additional analysis of Yih protein query sequences by `blastp` (`-outfmt 7 -evalue 1e-3 -num_descriptions 30000  -num_alignments 30000`), select blastp results with E-value < 0.0
-3. Id mapping of protein homologs: cross-reference UniProt Knowledgebase accession numbers (UniProtKB-AC) to GenBank protein IDs based on ID mapping metadata from the FTP UniProt site 
-4. Select bacterial homologs according to taxonomy information from the FTP NCBI site
-5. For each protein sequence, get location of the respective gene from GFF annotations
+4. Id mapping of protein homologs: cross-reference UniProt Knowledgebase accession numbers (UniProtKB-AC) to GenBank protein IDs based on ID mapping metadata from the FTP UniProt site 
+5. Select bacterial homologs according to taxonomy information from the FTP NCBI site
+6. For each protein sequence, get location of the respective gene from GFF annotations
 
 
 **"nsimscan + blastp" approach**:
