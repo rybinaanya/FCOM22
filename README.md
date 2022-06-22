@@ -21,6 +21,12 @@ Tools used in the current work:
 * operon-mapper (LINK)
 * DNA Features Viewer (python3 package)
 
+
+### Workflow for phylogenetic analysis 
+
+
+
+
 ### Workflow for RNA-seq analysis 
 
 1. Primary quality check of reads data: `FastQC` and `MultiQC`
