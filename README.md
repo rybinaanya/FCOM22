@@ -6,7 +6,6 @@ Supplementary materials to the poster presented on the FEMS Conference on Microb
 
 
 ## Workflow  
-
 Tools used in the current work:
 - FastQC v0.11.9
 - MultiQC v1.12.dev0
@@ -20,7 +19,6 @@ Tools used in the current work:
 - DAVID (LINK)
 - operon-mapper (LINK)
 - DNA Features Viewer (python3 package)
-
 - hmmer 
 - 
 
@@ -33,9 +31,10 @@ Tools used in the current work:
  - Pfam35.0 database
  - taxonomy infromation from ftp://ftp.ncbi.nih.gov/pub/taxonomy/ 
 
-2. Searching for homologs of Yih proteins from _E. coli_ K-12 MG1655 (`phmmer`) in the Pfam protein database (Pfamseq), extraction pf protein sequences from Pfamseq (`esl-sfetch`), use them as a local database (`makeblastdb`) for additional analysis of Yih protein query sequences by `blastp` (`-outfmt 7 -evalue 1e-3 -num_descriptions 30000  -num_alignments 30000`)
-
-3. Id mapping of protein homologs: cross-reference UniProt Knowledgebase accession numbers (UniProtKB-AC) to GenBank protein IDs based on ID mapping metadata from the FTP UniProt site and select bacterial homologs according to taxnoomy information from the FTP NCBI site
+2. Searching for homologs of Yih proteins from _E. coli_ K-12 MG1655 (`phmmer`) in the Pfam protein database (Pfamseq), extracting protein sequences from the Pfamseq (`esl-sfetch`), use them as a local database (`makeblastdb`) for additional analysis of Yih protein query sequences by `blastp` (`-outfmt 7 -evalue 1e-3 -num_descriptions 30000  -num_alignments 30000`)
+3. Id mapping of protein homologs: cross-reference UniProt Knowledgebase accession numbers (UniProtKB-AC) to GenBank protein IDs based on ID mapping metadata from the FTP UniProt site 
+4. Select bacterial homologs according to taxonomy information from the FTP NCBI site
+5. 
 
 
 Homologs of Yih proteins of E. coli str. K-12 substr. MG1655 were searched using HMMER version 3.2.1 (phmmer, default parameters) in the Pfam protein database, or Pfamseq (http://hmmer.org/). Proteins sequences of phmmer output were extracted from Pfamseq by esl-sfetch program and used as a local database for additional analysis of Yih protein query sequences by BLASTP (Altschul et al.,1990) (parameters: -outfmt 7 -num_descriptions 30000 -num_alignments 30000). BLASTP results with E-value < 0.001 were selected. These sequences derived from Pfamseq had unique identifiers (ID) presented as UniProt Knowledgebase accession numbers (UniProtKB-AC) (Morgat et al., 2019). UniProtKB-ACs were cross-referenced to GenBank protein ID using metadata for ID mapping from the FTP UniProt site (Morgat et al., 2019). After that, out of all Yih protein homologs only bacterial ones were selected according to taxonomy information obtained from the FTP NCBI site (Agarwala et al., 2018). Analyzing GFF data, for each protein sequence we found where it is encoded using its GenBank genome ID.
