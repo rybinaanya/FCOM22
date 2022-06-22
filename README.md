@@ -8,18 +8,18 @@ Supplementary materials to the poster presented on the FEMS Conference on Microb
 ## Workflow  
 
 Tools used in the current work:
-FastQC v0.11.9
-MultiQC v1.12.dev0
-bbduk (Last modified October 17, 2017)
-bowtie2
-samtools
-featureCounts
-R version
-R studio version
-eggnog-mapper (LINK)
-DAVID (LINK)
-operon-mapper (LINK)
-DNA Features Viewer (python3 package)
+* FastQC v0.11.9
+* MultiQC v1.12.dev0
+* bbduk (Last modified October 17, 2017)
+* bowtie2
+* samtools
+* featureCounts
+* R version
+* R studio version
+* eggnog-mapper (LINK)
+* DAVID (LINK)
+* operon-mapper (LINK)
+* DNA Features Viewer (python3 package)
 
 ### Workflow for RNA-seq analysis 
 
