@@ -21,7 +21,6 @@ Tools used in the current work:
 - operon-mapper (LINK)
 - DNA Features Viewer (python3 package)
 
-
 - hmmer 
 - 
 
