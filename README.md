@@ -31,8 +31,8 @@ Tools used in the current work:
 
 1. Primary quality check of reads data: `FastQC` and `MultiQC`
 2. Trimming and filtering reads: `bbduk` (oprtions: `-Xmx1g ktrim=r k=23 mink=11 hdist=1 tpe tbo`)
-3. rRNA decontamination: mapping to rrna genes (bowtie2), getting unmapped reads (samtools), quality check  (fastqc + MultiQC)
-4. Mapping to reference genomes (_E. coli_ K12: GCF_000005845.2, _E. coli_ Nissle 1917: GCF_019967895.1): bowtie2 + samtools
+3. rRNA decontamination: mapping to rrna genes of respective strain (`bowtie2`), getting unmapped reads (`samtools`), quality check  (`FastQC` + `MultiQC`)
+4. Mapping to reference genomes (_E. coli_ K12: GCF_000005845.2, _E. coli_ Nissle 1917: GCF_019967895.1): `bowtie2` + `samtools`
 5. Counting reads to genomic features: `featureCounts`
 6. Differential expression analysis: `DESeq2`
 7. Functional analysis of DE genes:  `clusterProfiler`, `pathview`, `eggnog-mapper` (web-server), `DAVID` (web-server)
