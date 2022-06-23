@@ -87,11 +87,11 @@ Two _yih_ gene homologs were considered as co-localized if the distance between 
 
 ## Authors
 
-Anna Rybina, Skolkovo Institute of Science and Technology
-Artemiy Dakhnovets, Lomonosov Moscow State University, Institute of Cell Biophysics RAS 
-Anna Kaznadzey, Institute for Information Transmission Problems RAS
-Maria Tutukina, Skolkovo Institute of Science and Technology, Institute for Information Transmission Problems RAS
-Mikhail Gelfand, Skolkovo Institute of Science and Technology, Institute for Information Transmission Problems RAS
+- Anna Rybina, Skolkovo Institute of Science and Technology
+- Artemiy Dakhnovets, Lomonosov Moscow State University, Institute of Cell Biophysics RAS 
+- Anna Kaznadzey, Institute for Information Transmission Problems RAS
+- Maria Tutukina, Skolkovo Institute of Science and Technology, Institute for Information Transmission Problems RAS
+- Mikhail Gelfand, Skolkovo Institute of Science and Technology, Institute for Information Transmission Problems RAS
 
 
 ## References
