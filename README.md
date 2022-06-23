@@ -1,8 +1,15 @@
-# FCOM22
+# Multiple functions and forms of the Escherichia coli yih cassette
 
-Supplementary materials to the poster presented on the FEMS Conference on Microbiology 2022
+Supplementary materials to the poster presented on the FEMS Conference on Microbiology 2022 (FCOM22)
 
+## Abstract
+**Background**: The _ompLyihOPQRSTUVW_ cassette (further, the _yih_ cassette) of _Escherichia coli_ K-12 MG1655 participates in the degradation of sulfoquinovose (SQ), a derivative of glucose. Recent results in our laboratory demonstrated the possible connection of several _yih_ genes with lactose utilisation. We intend to examine the role of _yih_ genes in an alternative pathway of lactose catabolism in more detail and analyse the evolution of the _yih_ cassette. 
 
+**Objectives**: We aim to study the evolution of the _yih_ cassette and explore the possibility of its multifunctionality.
+
+**Methods**: The phylogenetic analysis allowed us to determine patterns of the _yih_ genes co-localization. RNA-sequencing and qRT-PCR were performed to assess the expression of _yih_ genes in _E. coli_ str. K-12 MG1655 and _E. coli_ str. Nissle 1917 strains during growth on glucose (a baseline condition), lactose, and SQ. 
+
+**Results**: According to the phylogenetic analysis, the _yih_ cassette exists mainly in the Enterobacteriales order as one of two forms, long (e.g., _ompLyihOPQRSTUVW_ in _E. coli_ str. K-12 MG1655) or short (e.g., _yihTUVW_ in _E. coli_ str. Nissle 1917). Our qRT-PCR results demonstrated a distinct activation of the _yih_ genes of the long cassette during growth on sulfoquinovose and a slight activation on lactose. In contrast, _yih_ genes of the short cassette did not respond to the differences in these carbon sources. Differential expression analysis results were consistent with these observations. We suggest that the long _yih_ cassette is responsible for the SQ and lactose degradation. The short variant might be involved in other metabolic pathways.
 
 
 ## Workflow  
