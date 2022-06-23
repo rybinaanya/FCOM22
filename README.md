@@ -85,6 +85,15 @@ Two _yih_ gene homologs were considered as co-localized if the distance between 
 7. Functional analysis of DE genes:  `clusterProfiler`, `pathview`, `eggnog-mapper` (web-server), `DAVID` (web-server)
 8. Operon prediction and visualization: `operon-mapper`, `DNA Features Viewer` (python3)
 
+## Authors
+
+Anna Rybina, Skolkovo Institute of Science and Technology
+Artemiy Dakhnovets, Lomonosov Moscow State University, Institute of Cell Biophysics RAS 
+Anna Kaznadzey, Institute for Information Transmission Problems RAS
+Maria Tutukina, Skolkovo Institute of Science and Technology, Institute for Information Transmission Problems RAS
+Mikhail Gelfand, Skolkovo Institute of Science and Technology, Institute for Information Transmission Problems RAS
+
+
 ## References
 
 Denger, K., Weiss, M., Felux, A., Schneider, A., Mayer, C., Spiteller, D., … Schleheck, D. (2014). in the biogeochemical sulphur cycle. Nature, 507(7490), 114–117.https://doi.org/10.1038/nature12947
