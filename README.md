@@ -32,7 +32,7 @@ Tools used in the current work:
  - taxonomy infromation (from ftp://ftp.ncbi.nih.gov/pub/taxonomy/) 
 
 
-1.1 **Search for homologs of Yih proteins: "phmmer + blastp" approach**
+1.1. **Search for homologs of Yih proteins: "phmmer + blastp" approach**
 
 - Search for homologs of Yih proteins from _E. coli_ K-12 MG1655 (`phmmer`) in the Pfam protein database (Pfamseq), extracting protein sequences from the Pfamseq (`esl-sfetch`), use them as a local database (`makeblastdb`) for additional analysis of Yih protein query sequences by `blastp` (`-outfmt 7 -evalue 1e-3 -num_descriptions 30000  -num_alignments 30000`), select BLASTP results with E-value < 0.0
 - Id mapping of protein homologs: cross-reference UniProt Knowledgebase accession numbers (UniProtKB-AC) to GenBank protein IDs based on ID mapping metadata from the FTP UniProt site 
@@ -50,6 +50,13 @@ To increase the number of strains in our dataset with the Yih protein homologs, 
 - Build a local database (`makeblastdb`) and run `blastp`using Yih proteins of _E. coli_ str. K-12 substr. MG1655 as the query; select BLASTP results with E-value < 0.001
 
 Pool protein sequences of Yih homologs obtained from both "phmmer + blastp" and "nsimscan+blastp" approaches into a single dataset
+
+
+2. **Identification of cassette content**
+First, coordinates of genes coding for homologs of Yih proteins were retrieved from GBFF annotation data. As was mentioned before, two yih gene homologs were considered as co-localized if the distance between their middle coordinates on the genome was less than 10 000 nucleotides (Fig. 11). To put GenBank genome ID and organism name in concordance with mutual positioning of yih homologs on the chromosomes and to study the obtained cassette combinations, ad hoc python scripts were written.
+
+3. **Construction of protein phylogenetic trees**
+Protein sequences of Yih homologs were aligned using the MUSCLE tool (Edgar et al., 2004). If multiple sequence alignment consisted of less than 500 sequences, protein phylogenetic trees were built by Maximum likelihood algorithm using PhyML program (Guindon et al., 2003). Otherwise, FastTree was applied (Price et al., 2010). MUSCLE, PhyML and FastTree were run with default parameter. Phylogenetic trees were displayed using a web server ITOL (Letunic and Bork, 2006). To add details to tree, visualization annotation files for ITOL were generated using ad hoc developed python scripts.
 
 ### Workflow for RNA-seq analysis 
 
