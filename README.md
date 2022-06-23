@@ -17,21 +17,21 @@ Tools used in the current work:
 - FastQC v0.11.9
 - MultiQC v1.12.dev0
 - bbduk (Last modified October 17, 2017)
-- bowtie2
-- samtools
-- featureCounts
-- R version
-- R studio version
-- eggnog-mapper (LINK)
-- DAVID (LINK)
-- operon-mapper (LINK)
-- DNA Features Viewer (python3 package)
-- hmmer 
-- esl-sfetch
-- blast
-- nsimscan
-- mafft
-- FastTree 
+- bowtie2 v2.2.1
+- samtools v1.11
+- featureCounts v2.0.1
+- R version 3.6.3
+- R studio version 1.4.1717
+- eggnog-mapper ([LINK](http://eggnog-mapper.embl.de))
+- DAVID ([LINK](https://david.ncifcrf.gov/tools.jsp))
+- operon-mapper ([LINK](https://biocomputo.ibt.unam.mx/operon_mapper/))
+- DNA Features Viewer, biopython, numpy, pandas, matplotlib, seaborn (python3 packages)
+- phmmer v3.1b2
+- esl-sfetch vh3.1b2
+- BLAST 2.9.0+
+- nsimscan v1.1.84
+- mafft v7.475
+- FastTree v2.1.11 No SSE3
 
 ### Workflow for phylogenetic analysis 
 
