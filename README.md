@@ -44,7 +44,7 @@ Tools used in the current work:
 
 To increase the number of strains in our dataset with the Yih protein homologs, independently of the procedure described above, we found nucleotide homologs of yih genes and then obtained respective protein sequences.
 
-- Identify genomic regions homologous to yih genes against bacterial genomes `nsimscan` (`-v -k 8 -t 150 --it 55 --xt 55 --rpq 10000 --om M8 --maxslen 10000000 --minlen 70 --mdom`). 
+- Identify genomic regions homologous to yih genes against bacterial genomes `nsimscan` (`-v -k 8 -t 150 --it 55 --xt 55 --rpq 30000 --om M8 --maxslen 10000000 --minlen 70 --mdom`). 
 - Calculate midpoint genomic location for each homologous region
 - Extract protein sequence of candidate Yih homologs from translated CDS records 
 - Build a local database (`makeblastdb`) and run `blastp`using Yih proteins of _E. coli_ str. K-12 substr. MG1655 as the query; select BLASTP results with E-value < 0.001
