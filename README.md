@@ -1,4 +1,4 @@
-# Multiple functions and forms of the Escherichia coli yih cassette
+# Multiple functions and forms of the _Escherichia coli yih_ cassette
 
 Supplementary materials to the poster presented on the FEMS Conference on Microbiology 2022 (FCOM22)
 
