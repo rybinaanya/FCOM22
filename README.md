@@ -59,9 +59,8 @@ Pool protein sequences of Yih homologs obtained from both "phmmer + blastp" and 
 2. **Identification of cassette content**
 
 Two _yih_ gene homologs were considered as co-localized if the distance between their middle coordinates on the genome was less than 10 000 nucleotides 
-
-- retrieve coordinates of genes coding for homologs of Yih proteins from GFF annotation files (_ad hoc_ python scripts) 
-- put GenBank genome ID and organism name in concordance with mutual positioning of _yih_ homologs on the chromosomes (_ad hoc_ python scripts) 
+- Retrieve coordinates of genes coding for homologs of Yih proteins from GFF annotation files (_ad hoc_ python scripts) 
+- Put GenBank genome ID and organism name in concordance with mutual positioning of _yih_ homologs on the chromosomes (_ad hoc_ python scripts) 
 
 3. **Construction of protein phylogenetic trees**
 - Protein multiple sequence alignment: `mafft` (default options)
