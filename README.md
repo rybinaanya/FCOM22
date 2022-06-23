@@ -22,9 +22,9 @@ Tools used in the current work:
 - featureCounts v2.0.1
 - R version 3.6.3
 - R studio version 1.4.1717
-- eggnog-mapper ([LINK](http://eggnog-mapper.embl.de))
-- DAVID ([LINK](https://david.ncifcrf.gov/tools.jsp))
-- operon-mapper ([LINK](https://biocomputo.ibt.unam.mx/operon_mapper/))
+- [eggnog-mapper](http://eggnog-mapper.embl.de)
+- [DAVID](https://david.ncifcrf.gov/tools.jsp) 
+- [operon-mapper](https://biocomputo.ibt.unam.mx/operon_mapper/)
 - DNA Features Viewer, biopython, numpy, pandas, matplotlib, seaborn (python3 packages)
 - phmmer v3.1b2
 - esl-sfetch vh3.1b2
