@@ -27,12 +27,11 @@ Tools used in the current work:
 - operon-mapper (LINK)
 - DNA Features Viewer (python3 package)
 - hmmer 
+- esl-sfetch
 - blast
 - nsimscan
 - mafft
 - FastTree 
-- 
-
 
 ### Workflow for phylogenetic analysis 
 
