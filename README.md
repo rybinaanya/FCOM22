@@ -20,6 +20,10 @@ Tools used in the current work:
 - operon-mapper (LINK)
 - DNA Features Viewer (python3 package)
 - hmmer 
+- blast
+- nsimscan
+- mafft
+- FastTree 
 - 
 
 
@@ -53,10 +57,17 @@ Pool protein sequences of Yih homologs obtained from both "phmmer + blastp" and 
 
 
 2. **Identification of cassette content**
-First, coordinates of genes coding for homologs of Yih proteins were retrieved from GBFF annotation data. As was mentioned before, two yih gene homologs were considered as co-localized if the distance between their middle coordinates on the genome was less than 10 000 nucleotides (Fig. 11). To put GenBank genome ID and organism name in concordance with mutual positioning of yih homologs on the chromosomes and to study the obtained cassette combinations, ad hoc python scripts were written.
+
+Two _yih_ gene homologs were considered as co-localized if the distance between their middle coordinates on the genome was less than 10 000 nucleotides 
+
+- retrieve coordinates of genes coding for homologs of Yih proteins from GFF annotation files (_ad hoc_ python scripts) 
+- put GenBank genome ID and organism name in concordance with mutual positioning of _yih_ homologs on the chromosomes (_ad hoc_ python scripts) 
 
 3. **Construction of protein phylogenetic trees**
-Protein sequences of Yih homologs were aligned using the MUSCLE tool (Edgar et al., 2004). If multiple sequence alignment consisted of less than 500 sequences, protein phylogenetic trees were built by Maximum likelihood algorithm using PhyML program (Guindon et al., 2003). Otherwise, FastTree was applied (Price et al., 2010). MUSCLE, PhyML and FastTree were run with default parameter. Phylogenetic trees were displayed using a web server ITOL (Letunic and Bork, 2006). To add details to tree, visualization annotation files for ITOL were generated using ad hoc developed python scripts.
+- Protein multiple sequence alignment: `mafft` (default options)
+- Compute approximately-maximum-likelihood phylogenetic trees: `FastTree`
+- Visualize phylogenetic trees: `Itol` (web server); annotation files for ITOL were generated using _ad hoc_ developed python scripts
+
 
 ### Workflow for RNA-seq analysis 
 
