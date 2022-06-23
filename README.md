@@ -56,13 +56,13 @@ To increase the number of strains in our dataset with the Yih protein homologs, 
 Pool protein sequences of Yih homologs obtained from both "phmmer + blastp" and "nsimscan+blastp" approaches into a single dataset
 
 
-2. **Identification of cassette content**
+2. **Identify cassette content**
 
 Two _yih_ gene homologs were considered as co-localized if the distance between their middle coordinates on the genome was less than 10 000 nucleotides 
 - Retrieve coordinates of genes coding for homologs of Yih proteins from GFF annotation files (_ad hoc_ python scripts) 
 - Put GenBank genome ID and organism name in concordance with mutual positioning of _yih_ homologs on the chromosomes (_ad hoc_ python scripts) 
 
-3. **Construction of protein phylogenetic trees**
+3. **Construct protein phylogenetic trees**
 - Protein multiple sequence alignment: `mafft` (default options)
 - Compute approximately-maximum-likelihood phylogenetic trees: `FastTree`
 - Visualize phylogenetic trees: `Itol` (web server); annotation files for ITOL were generated using _ad hoc_ developed python scripts
