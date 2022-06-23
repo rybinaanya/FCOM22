@@ -69,7 +69,9 @@ Two _yih_ gene homologs were considered as co-localized if the distance between 
 - Put GenBank genome ID and organism name in concordance with mutual positioning of _yih_ homologs on the chromosomes (_ad hoc_ python scripts) 
 
 **3. Construct protein phylogenetic trees**
+
 According to Kaznadzey et al. (2018), growth of the _E. coli_ culture on lactose as a sole carbon source resulted in the significantly enhanced expression of four yih genes, notably _yihS_, _yihT_, _yihV_, _yihW_. Therefore, we further refer to these genes as “core” genes, presumably having multifunctional characteristics. Assessing protein phylogenetic trees, we selected organisms that possessed a cassette consisting of at least three core _yih_ genes and subjected them to subsequent analysis.
+
 - Protein multiple sequence alignment: `mafft` (default options)
 - Compute approximately-maximum-likelihood phylogenetic trees: `FastTree` (default options)
 - Visualize phylogenetic trees: `Itol` (web server); annotation files for ITOL were generated using _ad hoc_ developed python scripts
