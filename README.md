@@ -29,14 +29,14 @@ Tools used in the current work:
 
 ### Workflow for phylogenetic analysis 
 
-0. **Retrieve data**: 
+**0. Retrieve data**: 
  - bacterial complete genome sequences and annotations of latest version, respective translated CDS records (from the RefSeq FTP server);  
  - id mapping metadata (from Uniprot FTP server);
  - Pfam35.0 database;
  - taxonomy infromation (from ftp://ftp.ncbi.nih.gov/pub/taxonomy/) 
 
 
-1.1. **Search for homologs of Yih proteins: "phmmer + blastp" approach**
+**1.1. Search for homologs of Yih proteins: "phmmer + blastp" approach**
 
 - Search for homologs of Yih proteins from _E. coli_ K-12 MG1655 (`phmmer`) in the Pfam protein database (Pfamseq), extracting protein sequences from the Pfamseq (`esl-sfetch`), use them as a local database (`makeblastdb`) for additional analysis of Yih protein query sequences by `blastp` (`-outfmt 7 -evalue 1e-3 -num_descriptions 30000  -num_alignments 30000`), select BLASTP results with E-value < 0.0
 - Id mapping of protein homologs: cross-reference UniProt Knowledgebase accession numbers (UniProtKB-AC) to GenBank protein IDs based on ID mapping metadata from the FTP UniProt site 
@@ -44,7 +44,7 @@ Tools used in the current work:
 - For each protein sequence, get location of the respective gene from GFF annotations
 
 
-1.2. **Search for homologs of Yih proteins: "nsimscan + blastp" approach**:
+**1.2. Search for homologs of Yih proteins: "nsimscan + blastp" approach**:
 
 To increase the number of strains in our dataset with the Yih protein homologs, independently of the procedure described above, we found nucleotide homologs of yih genes and then obtained respective protein sequences.
 
@@ -56,13 +56,13 @@ To increase the number of strains in our dataset with the Yih protein homologs, 
 Pool protein sequences of Yih homologs obtained from both "phmmer + blastp" and "nsimscan+blastp" approaches into a single dataset
 
 
-2. **Identify cassette content**
+**2. Identify cassette content**
 
 Two _yih_ gene homologs were considered as co-localized if the distance between their middle coordinates on the genome was less than 10 000 nucleotides 
 - Retrieve coordinates of genes coding for homologs of Yih proteins from GFF annotation files (_ad hoc_ python scripts) 
 - Put GenBank genome ID and organism name in concordance with mutual positioning of _yih_ homologs on the chromosomes (_ad hoc_ python scripts) 
 
-3. **Construct protein phylogenetic trees**
+**3. Construct protein phylogenetic trees**
 - Protein multiple sequence alignment: `mafft` (default options)
 - Compute approximately-maximum-likelihood phylogenetic trees: `FastTree`
 - Visualize phylogenetic trees: `Itol` (web server); annotation files for ITOL were generated using _ad hoc_ developed python scripts
