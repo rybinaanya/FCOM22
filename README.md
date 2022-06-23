@@ -64,7 +64,7 @@ Two _yih_ gene homologs were considered as co-localized if the distance between 
 
 **3. Construct protein phylogenetic trees**
 - Protein multiple sequence alignment: `mafft` (default options)
-- Compute approximately-maximum-likelihood phylogenetic trees: `FastTree`
+- Compute approximately-maximum-likelihood phylogenetic trees: `FastTree` (default options)
 - Visualize phylogenetic trees: `Itol` (web server); annotation files for ITOL were generated using _ad hoc_ developed python scripts
 
 
