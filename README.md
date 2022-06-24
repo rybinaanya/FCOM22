@@ -11,6 +11,7 @@ Supplementary materials to the poster presented on the FEMS Conference on Microb
 
 **Results**: According to the phylogenetic analysis, the _yih_ cassette exists mainly in the Enterobacteriales order as one of two forms, long (e.g., _ompLyihOPQRSTUVW_ in _E. coli_ str. K-12 MG1655) or short (e.g., _yihTUVW_ in _E. coli_ str. Nissle 1917). Our qRT-PCR results demonstrated a distinct activation of the _yih_ genes of the long cassette during growth on sulfoquinovose and a slight activation on lactose. In contrast, _yih_ genes of the short cassette did not respond to the differences in these carbon sources. Differential expression analysis results were consistent with these observations. We suggest that the long _yih_ cassette is responsible for the SQ and lactose degradation. The short variant might be involved in other metabolic pathways.
 
+<img src="https://github.com/rybinaanya/FCOM22/blob/main/FCOM2022_Poster_Rybina.png" width=50% height=50%>
 
 ## Workflow  
 Tools used in the current work:
