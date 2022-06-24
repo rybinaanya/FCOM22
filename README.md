@@ -77,6 +77,14 @@ According to Kaznadzey et al. (2018), growth of the _E. coli_ culture on lactose
 - Visualize phylogenetic trees: `Itol` (web server); annotation files for ITOL were generated using _ad hoc_ developed python scripts
 
 
+### Workflow for _E. coli_ Nissle 1917 genome assembly 
+
+The raw reads have been deposited in the NCBI SRA under the accession no. SRR14244429.
+
+The whole-genome shotgun project has been deposited in DDBJ/ENA/GenBank under the accession no. PRJNA722272.
+
+
+
 ### Workflow for RNA-seq analysis 
 
 1. Primary quality check of reads data: `FastQC` and `MultiQC`
