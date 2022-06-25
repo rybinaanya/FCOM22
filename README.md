@@ -93,7 +93,7 @@ The whole-genome shotgun project has been deposited in DDBJ/ENA/GenBank under th
 3. Evaluate quality of the resulting assembles: `quast`
 4. Assess completeness and contamination of draft assembly: `CheckM`
 5. Gap filling of reference-guided genome assembly using the reference GCA_003546975.1: _ad hoc_ python scripts
-6. Evaluate quality of the assembly, comparing with teh reference: `Icarus` browser as a part of `quast`
+6. Evaluate quality of the assembly, comparing with the reference: `Icarus` browser as a part of `quast`
 
 
 
