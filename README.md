@@ -84,6 +84,8 @@ According to Kaznadzey et al. (2018), growth of the _E. coli_ culture on lactose
 ### Workflow for _E. coli_ Nissle 1917 genome assembly 
 
 _E. coli_ Nissle 1917 was isolated from the probiotic pharmaceutical Mutaflor®
+The raw reads have been deposited in the NCBI SRA under the accession no. SRR14244429.
+The whole-genome shotgun project has been deposited in DDBJ/ENA/GenBank under the accession no. PRJNA722272.
 
 1. Primary quality check of reads data: `FastQC`
 2. _De novo_ and reference-guided genome assembly (GCA_003546975.1 (2018) was used as a reference genome): `spades` (`--careful --cov-cutoff auto`);  contigs were discarded if their length were less than 200 bp
@@ -91,10 +93,7 @@ _E. coli_ Nissle 1917 was isolated from the probiotic pharmaceutical Mutaflor®
 4. Assess completeness and contamination of draft assembly: `CheckM`
 5. Gap filling of reference-guided genome assembly using the reference GCA_003546975.1: _ad hoc_ python scripts
 6. Evaluate quality of the assembly, comparing with teh reference: `Icarus` browser as a part of `quast`
-7. Submit data to DDBJ/ENA/GenBank and SRA databases   
 
-The raw reads have been deposited in the NCBI SRA under the accession no. SRR14244429.
-The whole-genome shotgun project has been deposited in DDBJ/ENA/GenBank under the accession no. PRJNA722272.
 
 
 
