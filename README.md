@@ -84,6 +84,7 @@ According to Kaznadzey et al. (2018), growth of the _E. coli_ culture on lactose
 ### Workflow for _E. coli_ Nissle 1917 genome assembly 
 
 _E. coli_ Nissle 1917 was isolated from the probiotic pharmaceutical Mutaflor®
+
 The raw reads have been deposited in the NCBI SRA under the accession no. SRR14244429.
 The whole-genome shotgun project has been deposited in DDBJ/ENA/GenBank under the accession no. PRJNA722272.
 
