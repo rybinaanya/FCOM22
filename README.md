@@ -43,12 +43,12 @@ Tools used in the current work:
  - bacterial complete genome sequences and annotations of latest version, respective translated CDS records (from the RefSeq FTP server);  
  - id mapping metadata (from Uniprot FTP server);
  - Pfam35.0 database;
- - taxonomy infromation (from ftp://ftp.ncbi.nih.gov/pub/taxonomy/) 
+ - taxonomy information (from ftp://ftp.ncbi.nih.gov/pub/taxonomy/) 
 
 
 **1.1. Search for homologs of Yih proteins: "phmmer + blastp" approach**
 
-- Search for homologs of Yih proteins from _E. coli_ K-12 MG1655 (`phmmer`) in the Pfam protein database (Pfamseq), extracting protein sequences from the Pfamseq (`esl-sfetch`), use them as a local database (`makeblastdb`) for additional analysis of Yih protein query sequences by `blastp` (`-outfmt 7 -evalue 1e-3 -num_descriptions 30000  -num_alignments 30000`), select BLASTP results with E-value < 0.0
+- Search for homologs of Yih proteins from _E. coli_ K-12 MG1655 (`phmmer`) in the Pfam protein database (Pfamseq), extracting protein sequences from the Pfamseq (`esl-sfetch`), use them as a local database (`makeblastdb`) for additional analysis of Yih protein query sequences by `blastp` (`-outfmt 7 -evalue 1e-3 -num_descriptions 30000  -num_alignments 30000`), select BLASTP results with E-value < 0.001
 - Id mapping of protein homologs: cross-reference UniProt Knowledgebase accession numbers (UniProtKB-AC) to GenBank protein IDs based on ID mapping metadata from the FTP UniProt site (_ad hoc_ bash scripts)
 - Select bacterial homologs according to taxonomy information from the FTP NCBI site (_ad hoc_ bash scripts)
 - For each protein sequence, get location of the respective gene from GFF annotations (_ad hoc_ python scripts)
